@@ -37,6 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'apps.animes.apps.AnimesConfig',
+    'apps.categories.apps.CategoriesConfig',
+    'apps.episodes.apps.EpisodesConfig',
+    'apps.genres.apps.GenresConfig',
+    'apps.mangakas.apps.MangakasConfig',
+    'apps.playlists.apps.PlaylistsConfig',
+    'apps.search.apps.SearchConfig',
+    'apps.streamingsites.apps.StreamingsitesConfig',
+    'apps.users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
