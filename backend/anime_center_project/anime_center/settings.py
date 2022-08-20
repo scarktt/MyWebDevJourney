@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'apps.episodes.apps.EpisodesConfig',
     'apps.genres.apps.GenresConfig',
     'apps.mangakas.apps.MangakasConfig',
-    'apps.playlists.apps.PlaylistsConfig',
+    'apps.animelists.apps.AnimelistsConfig',
     'apps.search.apps.SearchConfig',
     'apps.streamingsites.apps.StreamingsitesConfig',
     'apps.users.apps.UsersConfig',

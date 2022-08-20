@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class PlaylistsConfig(AppConfig):
+class AnimelistConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.playlists'
+    name = 'apps.animelist'
