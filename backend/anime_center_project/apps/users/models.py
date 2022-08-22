@@ -16,6 +16,7 @@ class User(models.Model):
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, blank=True, null=True)
     external_urls = models.JSONField("ExternalUrls", default=dict, blank=True)
     images = models.JSONField("Images", default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
 
 
 class Follower(models.Model):
