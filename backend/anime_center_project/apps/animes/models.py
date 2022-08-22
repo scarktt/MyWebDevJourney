@@ -3,13 +3,6 @@ from django.db import models
 from .. genres.models import Genre
 from .. users.models import User
 
-# watching, paused, finished
-ANIME_STATE = (
-    ('watching', 'Watching'),
-    ('paused', 'Paused'),
-    ('finished', 'Finished'),
-)
-
 
 class Broadcast(models.Model):
     broadcast_id = models.IntegerField(primary_key=True)
