@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class StreamingsitesConfig(AppConfig):
+class ListsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.streamingsites'
+    name = 'apps.lists'

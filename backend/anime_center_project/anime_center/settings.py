@@ -39,13 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'apps.animes.apps.AnimesConfig',
-    'apps.categories.apps.CategoriesConfig',
-    'apps.episodes.apps.EpisodesConfig',
     'apps.genres.apps.GenresConfig',
-    'apps.mangakas.apps.MangakasConfig',
-    'apps.animelists.apps.AnimelistsConfig',
+    'apps.lists.apps.ListsConfig',
     'apps.search.apps.SearchConfig',
-    'apps.streamingsites.apps.StreamingsitesConfig',
+    'apps.streamingplatforms.apps.StreamingplatformsConfig',
     'apps.users.apps.UsersConfig',
 ]
 
