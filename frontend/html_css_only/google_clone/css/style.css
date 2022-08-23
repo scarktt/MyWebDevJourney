@@ -9,6 +9,8 @@
 	--small-font-size: 1.3rem;
 	--medium-font-size: 1.4rem;
 	--big-font-size: 1.5rem;
+
+	--footer-left-right-padding: 4rem;
 }
 * {
 	box-sizing: border-box;
@@ -36,6 +38,15 @@ a:hover {
 li {
 	list-style-type: none;
 }
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
 /*HEADER*/
 header {
 	display: flex;
@@ -108,7 +119,7 @@ main {
 	flex-direction: row;
 	justify-content: center;
 }
-.input_container {
+.input__container {
 	flex-grow: 1;
 	position: relative;
 	margin-bottom: 3rem;
@@ -120,6 +131,7 @@ main {
 	width: 90vw;
 	max-width: 58rem;
 	min-width: 42rem;
+	padding-left:3.6rem;
 }
 .input:hover {
 	box-shadow: 0px 1px 10px var(--light-border-color);
@@ -213,12 +225,12 @@ main {
 }
 .footer__country--text {
 	display: block;
-	padding: 1.4rem;
+	padding: 1.4rem var(--footer-left-right-padding);
 }
 .footer__more {
 	display: flex;
 	flex-direction: column;
-	padding: 1.5rem 4rem;
+	padding: 1.5rem var(--footer-left-right-padding);
 	gap: 3rem 5rem;
 }
 .more__left-links,
