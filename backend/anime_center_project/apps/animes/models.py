@@ -2,6 +2,7 @@ from django.db import models
 
 from .. genres.models import Genre
 from .. users.models import User
+from .. lists.models import List
 
 
 class Broadcast(models.Model):
@@ -53,3 +54,10 @@ class UserAnime(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     state = models.CharField(max_length=8, choices=States.choices)
     score = models.IntegerField(choices=Scores.choices)
+
+class AnimeList(models.Model):
+    anime_id = models.ForeignKey(Anime, on_delete=models.CASCADE)
+    list_id = models.ForeignKey(List, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
