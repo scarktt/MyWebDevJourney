@@ -1,6 +1,6 @@
 from django.db import models
 
-from .. users.models import User
+from .. animes.models import Anime
 
 
 class List(models.Model):
@@ -8,10 +8,6 @@ class List(models.Model):
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     is_private = models.BooleanField(default=False)
+    anime = models.ManyToManyField(Anime)
 
-
-class UserList(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    list_id = models.ForeignKey(List, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
 
