@@ -11,3 +11,5 @@ class List(models.Model):
     anime = models.ManyToManyField(Anime)
 
 
+    def __str__(self):
+        return self.name
