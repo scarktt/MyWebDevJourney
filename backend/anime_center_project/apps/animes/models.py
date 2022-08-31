@@ -1,6 +1,7 @@
 from django.db import models
 
 from .. genres.models import Genre
+from .. streamingplatforms.models import StreamingPlatform
 
 
 class Broadcast(models.Model):
@@ -35,6 +36,10 @@ class Anime(models.Model):
     broadcast_id = models.ForeignKey(Broadcast, on_delete=models.SET_NULL, blank=True, null=True)
     source = models.CharField(max_length=255)
     genre = models.ManyToManyField(Genre)
+    streaming_platform = models.ManyToManyField(StreamingPlatform,
+        through='AnimeStreamingPlatform',
+        related_name='anime_id'
+    )
 
 
     class Meta:
@@ -47,3 +52,8 @@ class Anime(models.Model):
         return self.name
 
 
+class AnimeStreamingPlatform(models.Model):
+    anime_id = models.ForeignKey(Anime, on_delete=models.CASCADE)
+    streamingplatform_id = models.ForeignKey(StreamingPlatform, on_delete=models.CASCADE)
+    anime_url = models.CharField(max_length=255)
+    is_available = models.BooleanField(default=True)
