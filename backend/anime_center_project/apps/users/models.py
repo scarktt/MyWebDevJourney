@@ -87,3 +87,4 @@ class UserList(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     list_id = models.ForeignKey(List, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+
